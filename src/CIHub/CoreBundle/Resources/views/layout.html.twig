@@ -28,15 +28,13 @@
     {% if app.environment == 'prod' %}
         {% javascripts
         '@CIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.min.js'
-        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.min.js'
-        %}
+        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.min.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% else %}
         {% javascripts
         '@CIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.js'
-        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.js'
-        %}
+        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% endif %}
@@ -47,11 +45,18 @@
 
 {% block body %}
 
-    {% include '@CIHubCore/menu.html.twig' %}
+    {% include '@CIHubCore/Support/menu.html.twig' %}
 
-    <div class="container">
-        <div class="content">
-            {% block cihub_content %}{% endblock %}
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-3 col-md-2 sidebar">
+                {% block cihub_sidebar %}{% endblock %}
+            </div>
+
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                {% block cihub_content %}{% endblock %}
+            </div>
         </div>
     </div>
 {% endblock %}

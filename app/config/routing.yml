@@ -4,7 +4,7 @@ ci_hub_pre:
 
 ci_hub_post:
     resource: "@CIHubPostBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /post-ci
 
 ci_hub_user:
     resource: "@CIHubUserBundle/Resources/config/routing.yml"
