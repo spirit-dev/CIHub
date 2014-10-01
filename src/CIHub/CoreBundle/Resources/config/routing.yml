@@ -1,0 +1,3 @@
+ci_hub_core_homepage:
+    path:     /index
+    defaults: { _controller: CIHubCoreBundle:Default:index }

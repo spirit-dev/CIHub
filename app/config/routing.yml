@@ -1,0 +1,26 @@
+ci_hub_pre:
+    resource: "@CIHubPreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ci_hub_post:
+    resource: "@CIHubPostBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ci_hub_user:
+    resource: "@CIHubUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ci_hub_core:
+    resource: "@CIHubCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+# redirecting the root
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /index
+        permanent: true
