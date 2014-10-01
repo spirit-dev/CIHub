@@ -20,10 +20,12 @@
         {# TODO Définir le contenu en prod #}
     {% else %}
         {% javascripts
+        'bundles/cihubpost/js/common/objects/ui/post-project.js'
         'bundles/cihubpost/js/common/post-ci-ui.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% endif %}
+
 {% endblock %}
 
 {% block cihub_sidebar %}
@@ -89,6 +91,12 @@
     </div>
 
     <script type="text/javascript">
-        var PROJECTS = {{ projects|json_encode|raw }};
+        var PROJECTS = new Array();
+        {% for project in projects %}
+        PROJECTS[{{ project.id }}] = {
+            'id': {{ project.id }},
+            'name': "{{ project.name }}"
+        };
+        {% endfor %}
     </script>
 {% endblock %}

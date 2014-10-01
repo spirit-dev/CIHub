@@ -1,3 +1,5 @@
+var projectManipulator = new PostProjectManipulator();
+
 $(document).ready(function () {
     projectWatch();
 });
@@ -7,10 +9,11 @@ function projectWatch() {
     $('.postci-project').click(function () {
         var projId = this.id;
         console.log('Project watching project ' + projId);
-        loadProjectDatas();
+        loadProjectDatas(projId);
     });
 }
 
-function loadProjectDatas() {
-    console.log(PROJECTS);
+function loadProjectDatas(projId) {
+    console.log(PROJECTS[projId]);
+    projectManipulator.loadProject();
 }
