@@ -4,6 +4,7 @@
 
 {% block perso_css %}
     {% if app.environment == 'prod' %}
+        {# TODO Définir le contenu en prod #}
         {% stylesheets
         filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>

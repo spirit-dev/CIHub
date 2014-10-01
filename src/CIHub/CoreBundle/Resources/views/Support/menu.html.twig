@@ -31,8 +31,8 @@
                         </ul>
                     </li>
                 {% endif %}
-                <li class="divider-vertical"></li>
                 {% if is_granted('ROLE_ADMIN') %}
+                    <li class="divider-vertical"></li>
                     <li><a href="{{ path('ci_hub_post_homepage') }}">Post-CI</a></li>
                 {% endif %}
             </ul>

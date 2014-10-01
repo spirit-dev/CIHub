@@ -5,12 +5,19 @@
 
 {% block perso_css %}
     {% if app.environment == "prod" %}
+        {# TODO Définir le contenu en prod #}
     {% else %}
+        {% stylesheets
+        'bundles/cihubpost/css/common/post-ci-ui.css'
+        filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
     {% endif %}
 {% endblock %}
 
 {% block perso_js %}
     {% if app.environment == "prod" %}
+        {# TODO Définir le contenu en prod #}
     {% else %}
         {% javascripts
         'bundles/cihubpost/js/common/post-ci-ui.js' %}
@@ -40,37 +47,48 @@
 
 {% block cihub_content %}
 
-    <h1 class="page-header">Post - CI</h1>
+    <div class="row">
+        <h1 class="page-header">Post - CI</h1>
+    </div>
 
-    <p>
-        Hello {{ name }} ! you're in post CI panel
-    </p>
-
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Projects</a>
+    <div class="row">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Projects</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                        {% for project in projects %}
+                            <li><a class="postci-project" id="{{ project.id }}" href="#">{{ project.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav nav-tabs nav-justified" role="tablist">
-                    {% for project in projects %}
-                        <li><a class="postci-project" id="{{ project.id }}" href="#">{{ project.name }}</a></li>
-                    {% endfor %}
-                </ul>
+        </nav>
+    </div>
+
+    <div class="row">
+
+        <div class="post-project-manipulator">
+            <div class="row">
+                <div class="post-project-header">HEADER</div>
+            </div>
+            <div class="row">
+                <div class="post-project-content">CONTENT</div>
             </div>
         </div>
-    </nav>
 
+    </div>
 
     <script type="text/javascript">
-        // TODO revoir l'injections des projets... probleme de tableau
-        var PROJECTS = "{{ projects }}";
+        var PROJECTS = {{ projects|json_encode|raw }};
     </script>
 {% endblock %}
