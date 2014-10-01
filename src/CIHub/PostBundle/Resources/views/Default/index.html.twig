@@ -2,6 +2,23 @@
 
 {% block title %}{{ parent() }} - Post-CI{% endblock %}
 
+
+{% block perso_css %}
+    {% if app.environment == "prod" %}
+    {% else %}
+    {% endif %}
+{% endblock %}
+
+{% block perso_js %}
+    {% if app.environment == "prod" %}
+    {% else %}
+        {% javascripts
+        'bundles/cihubpost/js/common/post-ci-ui.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endif %}
+{% endblock %}
+
 {% block cihub_sidebar %}
     <ul class="nav nav-sidebar">
         <li><a href="#">Overview</a></li>
@@ -44,11 +61,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
                     {% for project in projects %}
-                        <li><a href="#">{{ project.name }}</a></li>
+                        <li><a class="postci-project" id="{{ project.id }}" href="#">{{ project.name }}</a></li>
                     {% endfor %}
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    <script type="text/javascript">
+        // TODO revoir l'injections des projets... probleme de tableau
+        var PROJECTS = "{{ projects }}";
+    </script>
 {% endblock %}
