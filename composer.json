@@ -21,8 +21,9 @@
         "friendsofsymfony/user-bundle": "2.0.x-dev",
         "doctrine/doctrine-fixtures-bundle": "2.2.*",
 
-        "spirit-dev/ci-hub-pre-bundle": "dev-master",
-        "spirit-dev/ci-hub-post-bundle": "dev-master"
+        "spirit-dev/ci-hub-core-bundle": "0.*@dev",
+        "spirit-dev/ci-hub-pre-bundle": "0.*@dev",
+        "spirit-dev/ci-hub-post-bundle": "0.*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

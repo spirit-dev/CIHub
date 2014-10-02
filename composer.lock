@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "954a61dd9121598e5e37be6f2e82ac16",
+    "hash": "d578272c8e9ddc2cc81e017782c661c6",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1236,24 +1236,76 @@
             "time": "2014-07-19 10:52:35"
         },
         {
+            "name": "spirit-dev/ci-hub-core-bundle",
+            "version": "dev-master",
+            "target-dir": "SpiritDev/Bundle/CIHubCoreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spirit-dev/CIHubCoreBundle.git",
+                "reference": "42d98409e3fdad976ea413351555ba8ce89e22cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubCoreBundle/zipball/42d98409e3fdad976ea413351555ba8ce89e22cd",
+                "reference": "42d98409e3fdad976ea413351555ba8ce89e22cd",
+                "shasum": ""
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SpiritDev\\Bundle\\CIHubCoreBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-v2"
+            ],
+            "authors": [
+                {
+                    "name": "Jean Bordat",
+                    "email": "bordat.jean@gmail.com",
+                    "homepage": "http://jean.bordat.me/"
+                }
+            ],
+            "description": "Symfony2 component suite, arrounding CI tools",
+            "keywords": [
+                "Spirit-Dev",
+                "ci",
+                "continuous",
+                "integration",
+                "jenkins"
+            ],
+            "time": "2014-10-02 18:20:56"
+        },
+        {
             "name": "spirit-dev/ci-hub-post-bundle",
             "version": "dev-master",
             "target-dir": "SpiritDev/Bundle/CIHubPostBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spirit-dev/CIHubPostBundle.git",
-                "reference": "54c782164910f9760f2a0603148723c3f8df0f53"
+                "reference": "b175720b35b8e40fb48873898e6ba21f89073bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spirit-dev/CIHubPostBundle/zipball/54c782164910f9760f2a0603148723c3f8df0f53",
-                "reference": "54c782164910f9760f2a0603148723c3f8df0f53",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPostBundle/zipball/b175720b35b8e40fb48873898e6ba21f89073bf4",
+                "reference": "b175720b35b8e40fb48873898e6ba21f89073bf4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "spirit-dev/ci-hub-core-bundle": "0.x-dev"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "SpiritDev\\Bundle\\CIHubPostBundle": ""
@@ -1278,7 +1330,7 @@
                 "integration",
                 "jenkins"
             ],
-            "time": "2014-10-02 14:39:12"
+            "time": "2014-10-02 18:21:16"
         },
         {
             "name": "spirit-dev/ci-hub-pre-bundle",
@@ -1287,18 +1339,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spirit-dev/CIHubPreBundle.git",
-                "reference": "d498daadac0eb45608cee325d2ca08ad75ce8801"
+                "reference": "1b3df97f18000a3e8e12c15aef834ed3d4d71168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spirit-dev/CIHubPreBundle/zipball/d498daadac0eb45608cee325d2ca08ad75ce8801",
-                "reference": "d498daadac0eb45608cee325d2ca08ad75ce8801",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPreBundle/zipball/1b3df97f18000a3e8e12c15aef834ed3d4d71168",
+                "reference": "1b3df97f18000a3e8e12c15aef834ed3d4d71168",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "spirit-dev/ci-hub-core-bundle": "0.x-dev"
             },
             "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "SpiritDev\\Bundle\\CIHubPreBundle": ""
@@ -1323,7 +1380,7 @@
                 "integration",
                 "jenkins"
             ],
-            "time": "2014-10-02 14:38:45"
+            "time": "2014-10-02 18:22:02"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1879,6 +1936,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "friendsofsymfony/user-bundle": 20,
+        "spirit-dev/ci-hub-core-bundle": 20,
         "spirit-dev/ci-hub-pre-bundle": 20,
         "spirit-dev/ci-hub-post-bundle": 20
     },
