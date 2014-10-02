@@ -79,9 +79,22 @@
 
     <div class="row">
 
-        <div class="post-project-manipulator">
+        <div class="post-project-manipulator" style="display: none">
             <div class="row">
-                <div class="post-project-header">HEADER</div>
+                <div class="post-project-header">
+                    <div class="post-project-header-title">
+                        title
+                    </div>
+                    <div class="post-project-header-date-start">
+                        date start
+                    </div>
+                    <div class="post-project-header-description">
+                        description
+                    </div>
+                    <div class="post-project-header-leader">
+                        leader
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="post-project-content">CONTENT</div>
@@ -95,7 +108,10 @@
         {% for project in projects %}
         PROJECTS[{{ project.id }}] = {
             'id': {{ project.id }},
-            'name': "{{ project.name }}"
+            'name': "{{ project.name }}",
+            'description': "{{ project.description }}",
+            'dateCreation': "{{ project.dateCreation|date("Y-m-d") }}",
+            'leader': "{{ project.leader }}"
         };
         {% endfor %}
     </script>

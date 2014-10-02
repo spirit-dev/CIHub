@@ -1,19 +1,27 @@
+// Global var representing ProjectManipulator object
 var projectManipulator = new PostProjectManipulator();
 
+/**
+ * JQuery function called at doc Ready
+ */
 $(document).ready(function () {
     projectWatch();
 });
 
+/**
+ * Function called to define action on each available project
+ */
 function projectWatch() {
-    console.log('Project watch');
+    // Click définition
     $('.postci-project').click(function () {
-        var projId = this.id;
-        console.log('Project watching project ' + projId);
-        loadProjectDatas(projId);
+        loadProjectDatas(this.id);
     });
 }
 
+/**
+ * Function displaying a prject content.
+ * @param projId
+ */
 function loadProjectDatas(projId) {
-    console.log(PROJECTS[projId]);
-    projectManipulator.loadProject();
+    projectManipulator.loadProject(PROJECTS[projId]);
 }
