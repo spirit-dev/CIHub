@@ -198,7 +198,8 @@ class RequirementCollection implements IteratorAggregate
      *
      * @param Requirement $requirement A Requirement instance
      */
-    public function add(Requirement $requirement) {
+    public function add(Requirement $requirement)
+    {
         $this->requirements[] = $requirement;
     }
 

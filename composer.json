@@ -19,7 +19,10 @@
         "sensio/framework-extra-bundle": "~3.0",
         "incenteev/composer-parameter-handler": "~2.0",
         "friendsofsymfony/user-bundle": "2.0.x-dev",
-        "doctrine/doctrine-fixtures-bundle": "2.2.*"
+        "doctrine/doctrine-fixtures-bundle": "2.2.*",
+
+        "spirit-dev/ci-hub-pre-bundle": "dev-master",
+        "spirit-dev/ci-hub-post-bundle": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"

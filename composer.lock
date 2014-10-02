@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ff465bc0cf7279e4856debe6c50ba6f0",
+    "hash": "954a61dd9121598e5e37be6f2e82ac16",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1236,6 +1236,96 @@
             "time": "2014-07-19 10:52:35"
         },
         {
+            "name": "spirit-dev/ci-hub-post-bundle",
+            "version": "dev-master",
+            "target-dir": "SpiritDev/Bundle/CIHubPostBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spirit-dev/CIHubPostBundle.git",
+                "reference": "54c782164910f9760f2a0603148723c3f8df0f53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPostBundle/zipball/54c782164910f9760f2a0603148723c3f8df0f53",
+                "reference": "54c782164910f9760f2a0603148723c3f8df0f53",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "SpiritDev\\Bundle\\CIHubPostBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-v2"
+            ],
+            "authors": [
+                {
+                    "name": "Jean Bordat",
+                    "email": "bordat.jean@gmail.com",
+                    "homepage": "http://jean.bordat.me/"
+                }
+            ],
+            "description": "Symfony2 component suite, arrounding CI tools",
+            "keywords": [
+                "Spirit-Dev",
+                "ci",
+                "continuous",
+                "integration",
+                "jenkins"
+            ],
+            "time": "2014-10-02 14:39:12"
+        },
+        {
+            "name": "spirit-dev/ci-hub-pre-bundle",
+            "version": "dev-master",
+            "target-dir": "SpiritDev/Bundle/CIHubPreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spirit-dev/CIHubPreBundle.git",
+                "reference": "d498daadac0eb45608cee325d2ca08ad75ce8801"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPreBundle/zipball/d498daadac0eb45608cee325d2ca08ad75ce8801",
+                "reference": "d498daadac0eb45608cee325d2ca08ad75ce8801",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "SpiritDev\\Bundle\\CIHubPreBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-v2"
+            ],
+            "authors": [
+                {
+                    "name": "Jean Bordat",
+                    "email": "bordat.jean@gmail.com",
+                    "homepage": "http://jean.bordat.me/"
+                }
+            ],
+            "description": "Symfony2 component suite, arrounding CI tools",
+            "keywords": [
+                "Spirit-Dev",
+                "ci",
+                "continuous",
+                "integration",
+                "jenkins"
+            ],
+            "time": "2014-10-02 14:38:45"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.2.2",
             "source": {
@@ -1788,7 +1878,9 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "friendsofsymfony/user-bundle": 20
+        "friendsofsymfony/user-bundle": 20,
+        "spirit-dev/ci-hub-pre-bundle": 20,
+        "spirit-dev/ci-hub-post-bundle": 20
     },
     "prefer-stable": false,
     "platform": {
