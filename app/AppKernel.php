@@ -1,7 +1,7 @@
 <?php
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 class AppKernel extends Kernel
 {
@@ -20,10 +20,14 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
 
-            new CIHub\CoreBundle\CIHubCoreBundle(),
+            new \SpiritDev\Bundle\CIHubCoreBundle\SpiritDevCIHubCoreBundle(),
+            new \SpiritDev\Bundle\CIHubPreBundle\SpiritDevCIHubPreBundle(),
+            new \SpiritDev\Bundle\CIHubPostBundle\SpiritDevCIHubPostBundle(),
+
+//            new CIHub\CoreBundle\CIHubCoreBundle(),
             new CIHub\UserBundle\CIHubUserBundle(),
-            new CIHub\PostBundle\CIHubPostBundle(),
-            new CIHub\PreBundle\CIHubPreBundle(),
+//            new CIHub\PostBundle\CIHubPostBundle(),
+//            new CIHub\PreBundle\CIHubPreBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

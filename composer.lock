@@ -1242,12 +1242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spirit-dev/CIHubCoreBundle.git",
-                "reference": "42d98409e3fdad976ea413351555ba8ce89e22cd"
+                "reference": "105749f006ab423bfd5d9c740268ebeb32309b7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spirit-dev/CIHubCoreBundle/zipball/42d98409e3fdad976ea413351555ba8ce89e22cd",
-                "reference": "42d98409e3fdad976ea413351555ba8ce89e22cd",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubCoreBundle/zipball/105749f006ab423bfd5d9c740268ebeb32309b7f",
+                "reference": "105749f006ab423bfd5d9c740268ebeb32309b7f",
                 "shasum": ""
             },
             "type": "symfony-bundle",
@@ -1280,7 +1280,7 @@
                 "integration",
                 "jenkins"
             ],
-            "time": "2014-10-02 18:20:56"
+            "time": "2014-10-03 14:46:01"
         },
         {
             "name": "spirit-dev/ci-hub-post-bundle",
@@ -1289,12 +1289,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spirit-dev/CIHubPostBundle.git",
-                "reference": "b175720b35b8e40fb48873898e6ba21f89073bf4"
+                "reference": "9f8a81c6b0652a51d9735506b5e5ec040e460864"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spirit-dev/CIHubPostBundle/zipball/b175720b35b8e40fb48873898e6ba21f89073bf4",
-                "reference": "b175720b35b8e40fb48873898e6ba21f89073bf4",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPostBundle/zipball/9f8a81c6b0652a51d9735506b5e5ec040e460864",
+                "reference": "9f8a81c6b0652a51d9735506b5e5ec040e460864",
                 "shasum": ""
             },
             "require": {
@@ -1330,7 +1330,7 @@
                 "integration",
                 "jenkins"
             ],
-            "time": "2014-10-02 18:21:16"
+            "time": "2014-10-03 14:50:34"
         },
         {
             "name": "spirit-dev/ci-hub-pre-bundle",
@@ -1339,12 +1339,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/spirit-dev/CIHubPreBundle.git",
-                "reference": "1b3df97f18000a3e8e12c15aef834ed3d4d71168"
+                "reference": "58b1fd67a0aa3b188b1137fa16f1c6bb85ed66b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spirit-dev/CIHubPreBundle/zipball/1b3df97f18000a3e8e12c15aef834ed3d4d71168",
-                "reference": "1b3df97f18000a3e8e12c15aef834ed3d4d71168",
+                "url": "https://api.github.com/repos/spirit-dev/CIHubPreBundle/zipball/58b1fd67a0aa3b188b1137fa16f1c6bb85ed66b1",
+                "reference": "58b1fd67a0aa3b188b1137fa16f1c6bb85ed66b1",
                 "shasum": ""
             },
             "require": {
@@ -1380,7 +1380,7 @@
                 "integration",
                 "jenkins"
             ],
-            "time": "2014-10-02 18:22:02"
+            "time": "2014-10-03 14:53:43"
         },
         {
             "name": "swiftmailer/swiftmailer",

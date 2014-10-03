@@ -34,7 +34,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ "CIHubCoreBundle","CIHubUserBundle","FOSUserBundle","CIHubPostBundle"]
+    bundles:        [ "CIHubUserBundle","FOSUserBundle","SpiritDevCIHubCoreBundle","SpiritDevCIHubPreBundle","SpiritDevCIHubPostBundle"]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

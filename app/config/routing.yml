@@ -1,21 +1,32 @@
-ci_hub_pre:
-    resource: "@CIHubPreBundle/Resources/config/routing.yml"
-    prefix:   /
-
-ci_hub_post:
-    resource: "@CIHubPostBundle/Resources/config/routing.yml"
-    prefix:   /post-ci
+#ci_hub_pre:
+#    resource: "@CIHubPreBundle/Resources/config/routing.yml"
+#    prefix:   /
+#
+#ci_hub_post:
+#    resource: "@CIHubPostBundle/Resources/config/routing.yml"
+#    prefix:   /post-ci
 
 ci_hub_user:
     resource: "@CIHubUserBundle/Resources/config/routing.yml"
     prefix:   /
 
-ci_hub_core:
-    resource: "@CIHubCoreBundle/Resources/config/routing.yml"
-    prefix:   /
+#ci_hub_core:
+#    resource: "@CIHubCoreBundle/Resources/config/routing.yml"
+#    prefix:   /
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+# spirit_dev_CIHubs_Bundles
+spirit_dev_cihub_core_bundle:
+    resource: "@SpiritDevCIHubCoreBundle/Resources/config/routing.yml"
+    prefix: /
+spirit_dev_cihub_pre_bundle:
+    resource: "@SpiritDevCIHubPreBundle/Resources/config/routing.yml"
+    prefix: /
+spirit_dev_cihub_post_bundle:
+    resource: "@SpiritDevCIHubPostBundle/Resources/config/routing.yml"
+    prefix: /post-ci
 
 # redirecting the root
 root:
