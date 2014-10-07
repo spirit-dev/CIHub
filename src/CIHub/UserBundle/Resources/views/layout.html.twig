@@ -6,15 +6,15 @@
     {% if app.environment == 'prod' %}
         {# TODO Définir le contenu en prod #}
         {% stylesheets
-        'bundles/cihubcore/js/lib/bootstrap-3.2.0/css/bootstrap.css'
-        'bundles/cihubcore/js/lib/bootstrap-3.2.0/css/bootstrap-theme.css'
+        'bundles/spiritdevcihubcore/js/lib/bootstrap-3.2.0/css/bootstrap.css'
+        'bundles/spiritdevcihubcore/js/lib/bootstrap-3.2.0/css/bootstrap-theme.css'
         filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
         {% endstylesheets %}
     {% else %}
         {% stylesheets
-        'bundles/cihubcore/js/lib/bootstrap-3.2.0/css/bootstrap.min.css'
-        'bundles/cihubcore/js/lib/bootstrap-3.2.0/css/bootstrap-theme.min.css'
+        'bundles/spiritdevcihubcore/js/lib/bootstrap-3.2.0/css/bootstrap.min.css'
+        'bundles/spiritdevcihubcore/js/lib/bootstrap-3.2.0/css/bootstrap-theme.min.css'
         filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}"/>
         {% endstylesheets %}
@@ -28,15 +28,17 @@
     {% if app.environment == 'prod' %}
         {# TODO Définir le contenu en prod #}
         {% javascripts
-        '@CIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.min.js'
-        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.min.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.min.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.min.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/GifLoader/src/js/gif_loader.min.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     {% else %}
         {% javascripts
-        '@CIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.js'
-        '@CIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/jquery-1.11.1/jquery-1.11.1.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/bootstrap-3.2.0/js/bootstrap.js'
+        '@SpiritDevCIHubCoreBundle/Resources/public/js/lib/GifLoader/src/js/gif_loader.js'
         %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
@@ -49,7 +51,7 @@
 
 {% block body %}
 
-    {% include '@CIHubCore/Support/menu.html.twig' %}
+    {% include '@SpiritDevCIHubCore/Support/menu.html.twig' %}
 
     <div class="container">
         {% block fos_user_content %}{% endblock %}
