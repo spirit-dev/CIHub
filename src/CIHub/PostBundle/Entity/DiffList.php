@@ -10,8 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="cihub_post_diff_list")
  * @ORM\Entity
  */
-class DiffList
-{
+class DiffList {
     /**
      * @var integer
      *
@@ -53,15 +52,22 @@ class DiffList
     private $project;
 
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName() {
+        return $this->name;
     }
 
     /**
@@ -70,21 +76,19 @@ class DiffList
      * @param string $name
      * @return DiffList
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get description
      *
-     * @return string 
+     * @return string
      */
-    public function getName()
-    {
-        return $this->name;
+    public function getDescription() {
+        return $this->description;
     }
 
     /**
@@ -93,21 +97,19 @@ class DiffList
      * @param string $description
      * @return DiffList
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get description
+     * Get dateCreation
      *
-     * @return string 
+     * @return \DateTime
      */
-    public function getDescription()
-    {
-        return $this->description;
+    public function getDateCreation() {
+        return $this->dateCreation;
     }
 
     /**
@@ -116,32 +118,8 @@ class DiffList
      * @param \DateTime $dateCreation
      * @return DiffList
      */
-    public function setDateCreation($dateCreation)
-    {
+    public function setDateCreation($dateCreation) {
         $this->dateCreation = $dateCreation;
-
-        return $this;
-    }
-
-    /**
-     * Get dateCreation
-     *
-     * @return \DateTime 
-     */
-    public function getDateCreation()
-    {
-        return $this->dateCreation;
-    }
-
-    /**
-     * Set project
-     *
-     * @param \CIHub\CoreBundle\Entity\Project $project
-     * @return DiffList
-     */
-    public function setProject(\CIHub\CoreBundle\Entity\Project $project = null)
-    {
-        $this->project = $project;
 
         return $this;
     }
@@ -151,8 +129,19 @@ class DiffList
      *
      * @return \CIHub\CoreBundle\Entity\Project
      */
-    public function getProject()
-    {
+    public function getProject() {
         return $this->project;
+    }
+
+    /**
+     * Set project
+     *
+     * @param \CIHub\CoreBundle\Entity\Project $project
+     * @return DiffList
+     */
+    public function setProject(\CIHub\CoreBundle\Entity\Project $project = null) {
+        $this->project = $project;
+
+        return $this;
     }
 }

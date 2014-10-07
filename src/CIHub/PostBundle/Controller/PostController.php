@@ -4,10 +4,8 @@ namespace CIHub\PostBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class PostController extends Controller
-{
-    public function indexAction()
-    {
+class PostController extends Controller {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $projects = $em->getRepository('CIHubCoreBundle:Project')->findAll();

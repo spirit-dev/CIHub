@@ -10,8 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="cihub_core_project")
  * @ORM\Entity
  */
-class Project
-{
+class Project {
     /**
      * @var integer
      *
@@ -53,15 +52,22 @@ class Project
     private $leader;
 
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName() {
+        return $this->name;
     }
 
     /**
@@ -70,21 +76,19 @@ class Project
      * @param string $name
      * @return Project
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get name
+     * Get description
      *
-     * @return string 
+     * @return string
      */
-    public function getName()
-    {
-        return $this->name;
+    public function getDescription() {
+        return $this->description;
     }
 
     /**
@@ -93,21 +97,19 @@ class Project
      * @param string $description
      * @return Project
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get description
+     * Get dateCreation
      *
-     * @return string 
+     * @return \DateTime
      */
-    public function getDescription()
-    {
-        return $this->description;
+    public function getDateCreation() {
+        return $this->dateCreation;
     }
 
     /**
@@ -116,32 +118,8 @@ class Project
      * @param \DateTime $dateCreation
      * @return Project
      */
-    public function setDateCreation($dateCreation)
-    {
+    public function setDateCreation($dateCreation) {
         $this->dateCreation = $dateCreation;
-
-        return $this;
-    }
-
-    /**
-     * Get dateCreation
-     *
-     * @return \DateTime 
-     */
-    public function getDateCreation()
-    {
-        return $this->dateCreation;
-    }
-
-    /**
-     * Set leader
-     *
-     * @param \CIHub\UserBundle\Entity\User $leader
-     * @return Project
-     */
-    public function setLeader(\CIHub\UserBundle\Entity\User $leader = null)
-    {
-        $this->leader = $leader;
 
         return $this;
     }
@@ -151,8 +129,19 @@ class Project
      *
      * @return \CIHub\UserBundle\Entity\User
      */
-    public function getLeader()
-    {
+    public function getLeader() {
         return $this->leader;
+    }
+
+    /**
+     * Set leader
+     *
+     * @param \CIHub\UserBundle\Entity\User $leader
+     * @return Project
+     */
+    public function setLeader(\CIHub\UserBundle\Entity\User $leader = null) {
+        $this->leader = $leader;
+
+        return $this;
     }
 }

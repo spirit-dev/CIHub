@@ -10,8 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="cihub_post_diff_list_inscription")
  * @ORM\Entity
  */
-class DiffListInscription
-{
+class DiffListInscription {
     /**
      * @var integer
      *
@@ -42,15 +41,22 @@ class DiffListInscription
     private $mailList;
 
 
-
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
+    }
+
+    /**
+     * Get diffList
+     *
+     * @return \DiffList
+     */
+    public function getDiffList() {
+        return $this->diffList;
     }
 
     /**
@@ -59,32 +65,8 @@ class DiffListInscription
      * @param \DiffList $diffList
      * @return DiffListInscription
      */
-    public function setDiffList(DiffList $diffList = null)
-    {
+    public function setDiffList(DiffList $diffList = null) {
         $this->diffList = $diffList;
-
-        return $this;
-    }
-
-    /**
-     * Get diffList
-     *
-     * @return \DiffList
-     */
-    public function getDiffList()
-    {
-        return $this->diffList;
-    }
-
-    /**
-     * Set mailList
-     *
-     * @param \MaillingList $mailList
-     * @return DiffListInscription
-     */
-    public function setMailList(\MaillingList $mailList = null)
-    {
-        $this->mailList = $mailList;
 
         return $this;
     }
@@ -94,8 +76,19 @@ class DiffListInscription
      *
      * @return \MaillingList
      */
-    public function getMailList()
-    {
+    public function getMailList() {
         return $this->mailList;
+    }
+
+    /**
+     * Set mailList
+     *
+     * @param \MaillingList $mailList
+     * @return DiffListInscription
+     */
+    public function setMailList(\MaillingList $mailList = null) {
+        $this->mailList = $mailList;
+
+        return $this;
     }
 }
